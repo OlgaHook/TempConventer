@@ -103,7 +103,14 @@
                             <constraint firstItem="3FG-Jp-M5f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="nxP-cr-edh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="TempConverter" id="QQx-nK-BcV"/>
+                    <navigationItem key="navigationItem" title="TempConverter" id="QQx-nK-BcV">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle" catalog="system" id="RoG-gb-weK">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <segue destination="Yp0-yj-FuH" kind="presentation" identifier="infoSegue" id="bO7-qm-fWW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="celsiusLabel" destination="jPH-q2-kqy" id="ucj-sd-kxr"/>
                         <outlet property="convertedTempLabel" destination="Xd7-SA-Ucy" id="eZr-Lm-V7c"/>
@@ -114,6 +121,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="799.20000000000005" y="63.418290854572717"/>
+        </scene>
+        <!--Temp Info View Controller-->
+        <scene sceneID="JDJ-MA-PYE">
+            <objects>
+                <viewController id="Yp0-yj-FuH" customClass="TempInfoViewController" customModule="TempConventer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rZ1-9Q-BF1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hI4-sS-erL">
+                                <rect key="frame" x="313" y="30" width="30" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="eQM-JI-o4A"/>
+                                    <constraint firstAttribute="height" constant="30" id="gEX-eb-Bpr"/>
+                                </constraints>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closeInfoButtonTapped:" destination="Yp0-yj-FuH" eventType="touchUpInside" id="F0C-Mu-956"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="akT-KW-14E"/>
+                        <color key="backgroundColor" red="0.80040115119999999" green="0.8925574422" blue="0.33207207509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hI4-sS-erL" firstAttribute="top" secondItem="akT-KW-14E" secondAttribute="top" constant="30" id="9m9-mO-fi9"/>
+                            <constraint firstItem="akT-KW-14E" firstAttribute="trailing" secondItem="hI4-sS-erL" secondAttribute="trailing" constant="32" id="VcI-6A-6fh"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z3a-f8-gzB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1483" y="71"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5rP-2y-Kkf">
@@ -135,6 +182,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="sun" width="375" height="667"/>
         <image name="sun.max" catalog="system" width="128" height="124"/>
         <image name="sun.min" catalog="system" width="128" height="121"/>
@@ -143,6 +191,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
