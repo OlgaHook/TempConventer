@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hOa-7o-oTi">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TempConverter-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TempConventer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="XPF-SM-qH9">
+                                <rect key="frame" x="0.0" y="-44" width="375" height="745"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature conventer from ºC to ºF and ºK" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbM-wh-TTA">
+                                <rect key="frame" x="65" y="114" width="245" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="IJU-O2-FfE"/>
+                                    <constraint firstAttribute="height" constant="74" id="l81-qR-5lu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0ºC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPH-q2-kqy">
+                                <rect key="frame" x="157" y="208" width="61" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="61" id="0S9-3x-0YG"/>
+                                    <constraint firstAttribute="height" constant="44" id="zlZ-HP-sHb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32ºF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xd7-SA-Ucy">
+                                <rect key="frame" x="157" y="345" width="61" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="61" id="0yr-cC-qaY"/>
+                                    <constraint firstAttribute="height" constant="45" id="NTI-ow-DEd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="3FG-Jp-M5f">
+                                <rect key="frame" x="63" y="281" width="249" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="245" id="yP6-nk-bjq"/>
+                                </constraints>
+                                <imageReference key="minimumValueImage" image="sun.min" catalog="system" symbolScale="small"/>
+                                <imageReference key="maximumValueImage" image="sun.max" catalog="system" symbolScale="large"/>
+                                <color key="minimumTrackTintColor" systemColor="labelColor"/>
+                                <color key="thumbTintColor" systemColor="systemRedColor"/>
+                            </slider>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rCm-9c-N8l">
+                                <rect key="frame" x="44" y="546" width="287" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="287" id="e6i-El-yZc"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Fahrenheit"/>
+                                    <segment title="Kelvin"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemRedColor"/>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rCm-9c-N8l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="05J-8A-byI"/>
+                            <constraint firstItem="3FG-Jp-M5f" firstAttribute="centerX" secondItem="XPF-SM-qH9" secondAttribute="centerX" id="24V-4a-0Zy"/>
+                            <constraint firstItem="Xd7-SA-Ucy" firstAttribute="centerX" secondItem="XPF-SM-qH9" secondAttribute="centerX" id="2pV-65-HQW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3FG-Jp-M5f" secondAttribute="trailing" constant="65" id="5gv-PL-A5T"/>
+                            <constraint firstItem="jPH-q2-kqy" firstAttribute="top" secondItem="kbM-wh-TTA" secondAttribute="bottom" constant="20" id="6ao-my-j0h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XPF-SM-qH9" secondAttribute="trailing" id="Kof-du-yHb"/>
+                            <constraint firstItem="jPH-q2-kqy" firstAttribute="centerX" secondItem="XPF-SM-qH9" secondAttribute="centerX" id="M0F-mZ-eAK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rCm-9c-N8l" secondAttribute="trailing" constant="44" id="Pr1-32-pcp"/>
+                            <constraint firstItem="XPF-SM-qH9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Q73-Xb-YaN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rCm-9c-N8l" secondAttribute="bottom" constant="90" id="QvZ-I7-nWI"/>
+                            <constraint firstItem="kbM-wh-TTA" firstAttribute="centerX" secondItem="XPF-SM-qH9" secondAttribute="centerX" id="YTf-Jv-Qwe"/>
+                            <constraint firstItem="XPF-SM-qH9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-140" id="Zcb-ct-IWC"/>
+                            <constraint firstItem="Xd7-SA-Ucy" firstAttribute="top" secondItem="3FG-Jp-M5f" secondAttribute="bottom" constant="34" id="Zce-J6-EOA"/>
+                            <constraint firstItem="kbM-wh-TTA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="Zd5-dX-PQi"/>
+                            <constraint firstItem="3FG-Jp-M5f" firstAttribute="top" secondItem="jPH-q2-kqy" secondAttribute="bottom" constant="29" id="dO0-YQ-uGb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XPF-SM-qH9" secondAttribute="bottom" constant="-34" id="egC-7s-hga"/>
+                            <constraint firstItem="rCm-9c-N8l" firstAttribute="centerX" secondItem="XPF-SM-qH9" secondAttribute="centerX" id="iHz-60-QT1"/>
+                            <constraint firstItem="3FG-Jp-M5f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="nxP-cr-edh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="TempConverter" id="QQx-nK-BcV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="799.20000000000005" y="63.418290854572717"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5rP-2y-Kkf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hOa-7o-oTi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="vde-v9-UwA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CVy-RQ-Mhd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jwd-d2-pEH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="79.200000000000003" y="65.217391304347828"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sun" width="375" height="667"/>
+        <image name="sun.max" catalog="system" width="128" height="124"/>
+        <image name="sun.min" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
