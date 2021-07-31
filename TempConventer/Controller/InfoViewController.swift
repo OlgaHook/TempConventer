@@ -1,5 +1,5 @@
 //
-//  TempInfoViewController.swift
+//  InfoViewController.swift
 //  TempConventer
 //
 //  Created by olga.krjuckova on 31/07/2021.
@@ -7,19 +7,19 @@
 
 import UIKit
 
-class TempInfoViewController: UIViewController {
+class InfoViewController: UIViewController {
 
     
-    @IBAction func closeInfoButtonTapped(_ sender: Any) {
+    @IBAction func closeInfoViewControlButton(_ sender: Any) {
+        
         self.dismiss(animated: true, completion: nil)
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        
     }
     
 

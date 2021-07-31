@@ -76,6 +76,7 @@
                                 <color key="selectedSegmentTintColor" systemColor="systemRedColor"/>
                                 <connections>
                                     <action selector="segmentValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="bhI-pI-HAs"/>
+                                    <action selector="segmentValueChangedInfo:" destination="Faw-Th-N7B" eventType="valueChanged" id="jz1-k1-meg"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
@@ -107,7 +108,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle" catalog="system" id="RoG-gb-weK">
                             <color key="tintColor" systemColor="labelColor"/>
                             <connections>
-                                <segue destination="Yp0-yj-FuH" kind="presentation" identifier="infoSegue" id="bO7-qm-fWW"/>
+                                <segue destination="6Lj-a5-K2w" kind="presentation" id="AKh-0t-1WX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -119,48 +120,97 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="Faw-Th-N7B" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="799.20000000000005" y="63.418290854572717"/>
         </scene>
-        <!--Temp Info View Controller-->
-        <scene sceneID="JDJ-MA-PYE">
+        <!--Info View Controller-->
+        <scene sceneID="WmQ-E3-k3q">
             <objects>
-                <viewController id="Yp0-yj-FuH" customClass="TempInfoViewController" customModule="TempConventer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rZ1-9Q-BF1">
+                <viewController id="6Lj-a5-K2w" customClass="InfoViewController" customModule="TempConventer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jzr-Sd-foV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hI4-sS-erL">
-                                <rect key="frame" x="313" y="30" width="30" height="30"/>
-                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXA-y6-GL0">
+                                <rect key="frame" x="305" y="20" width="40" height="40"/>
+                                <color key="backgroundColor" red="0.033924711230000001" green="0.8925574422" blue="0.1075717127" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="eQM-JI-o4A"/>
-                                    <constraint firstAttribute="height" constant="30" id="gEX-eb-Bpr"/>
+                                    <constraint firstAttribute="width" constant="40" id="3XE-ob-FoV"/>
+                                    <constraint firstAttribute="height" constant="40" id="9cP-eP-To9"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="X">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
+                                        <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="closeInfoButtonTapped:" destination="Yp0-yj-FuH" eventType="touchUpInside" id="F0C-Mu-956"/>
+                                    <action selector="closeInfoViewControlButton:" destination="6Lj-a5-K2w" eventType="touchUpInside" id="Yck-cZ-zmV"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to convert ºC to ºF and ºK" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8im-g4-Jub">
+                                <rect key="frame" x="69" y="89" width="237" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="237" id="IDr-6r-2ET"/>
+                                    <constraint firstAttribute="height" constant="77" id="kMM-0Z-vwg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhL-qI-VEc">
+                                <rect key="frame" x="73" y="189" width="229" height="85"/>
+                                <color key="backgroundColor" red="0.73735377950000003" green="0.65916396980000003" blue="0.087405979960000005" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="229" id="DlK-IG-uHo"/>
+                                    <constraint firstAttribute="height" constant="85" id="unb-cw-v8W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oR7-mx-MJh">
+                                <rect key="frame" x="73" y="348" width="229" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="229" id="2kI-Di-Oph"/>
+                                    <constraint firstAttribute="height" constant="31" id="XaE-Eq-Ta0"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="ºC to ºF"/>
+                                    <segment title="ºC to ºK"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.033924711230000001" green="0.8925574422" blue="0.1075717127" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="akT-KW-14E"/>
-                        <color key="backgroundColor" red="0.80040115119999999" green="0.8925574422" blue="0.33207207509999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="B9k-YU-6zR"/>
+                        <color key="backgroundColor" red="0.57789178900000004" green="0.8925574422" blue="0.50422290859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="hI4-sS-erL" firstAttribute="top" secondItem="akT-KW-14E" secondAttribute="top" constant="30" id="9m9-mO-fi9"/>
-                            <constraint firstItem="akT-KW-14E" firstAttribute="trailing" secondItem="hI4-sS-erL" secondAttribute="trailing" constant="32" id="VcI-6A-6fh"/>
+                            <constraint firstItem="B9k-YU-6zR" firstAttribute="trailing" secondItem="8im-g4-Jub" secondAttribute="trailing" constant="69" id="3fh-Uq-LUZ"/>
+                            <constraint firstItem="WhL-qI-VEc" firstAttribute="leading" secondItem="B9k-YU-6zR" secondAttribute="leading" constant="73" id="DHX-t4-Si4"/>
+                            <constraint firstItem="8im-g4-Jub" firstAttribute="leading" secondItem="B9k-YU-6zR" secondAttribute="leading" constant="69" id="FE7-Hd-JLj"/>
+                            <constraint firstItem="8im-g4-Jub" firstAttribute="top" secondItem="B9k-YU-6zR" secondAttribute="top" constant="89" id="PtZ-GV-rFb"/>
+                            <constraint firstItem="B9k-YU-6zR" firstAttribute="trailing" secondItem="WhL-qI-VEc" secondAttribute="trailing" constant="73" id="SOR-cD-WtX"/>
+                            <constraint firstItem="B9k-YU-6zR" firstAttribute="trailing" secondItem="oR7-mx-MJh" secondAttribute="trailing" constant="73" id="avg-Sg-b1R"/>
+                            <constraint firstItem="jXA-y6-GL0" firstAttribute="top" secondItem="B9k-YU-6zR" secondAttribute="top" constant="20" id="g37-zE-yqd"/>
+                            <constraint firstItem="oR7-mx-MJh" firstAttribute="leading" secondItem="B9k-YU-6zR" secondAttribute="leading" constant="73" id="jWc-OM-iga"/>
+                            <constraint firstItem="B9k-YU-6zR" firstAttribute="trailing" secondItem="jXA-y6-GL0" secondAttribute="trailing" constant="30" id="onx-Fg-qme"/>
+                            <constraint firstItem="WhL-qI-VEc" firstAttribute="top" secondItem="8im-g4-Jub" secondAttribute="bottom" constant="23" id="pEG-re-iMc"/>
+                            <constraint firstItem="oR7-mx-MJh" firstAttribute="top" secondItem="WhL-qI-VEc" secondAttribute="bottom" constant="74" id="zsf-M9-avp"/>
                         </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Z3a-f8-gzB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="whl-Hs-wBp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1483" y="71"/>
+            <point key="canvasLocation" x="1480.8" y="73.313343328335833"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5rP-2y-Kkf">
@@ -191,9 +241,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
