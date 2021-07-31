@@ -52,6 +52,7 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="3FG-Jp-M5f">
                                 <rect key="frame" x="63" y="281" width="249" height="31"/>
+                                <color key="tintColor" systemColor="labelColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="245" id="yP6-nk-bjq"/>
                                 </constraints>
@@ -59,6 +60,9 @@
                                 <imageReference key="maximumValueImage" image="sun.max" catalog="system" symbolScale="large"/>
                                 <color key="minimumTrackTintColor" systemColor="labelColor"/>
                                 <color key="thumbTintColor" systemColor="systemRedColor"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="5vl-xu-wRA"/>
+                                </connections>
                             </slider>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rCm-9c-N8l">
                                 <rect key="frame" x="44" y="546" width="287" height="32"/>
@@ -70,10 +74,14 @@
                                     <segment title="Kelvin"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" systemColor="systemRedColor"/>
+                                <connections>
+                                    <action selector="segmentValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="bhI-pI-HAs"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" systemColor="labelColor"/>
                         <constraints>
                             <constraint firstItem="rCm-9c-N8l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="05J-8A-byI"/>
                             <constraint firstItem="3FG-Jp-M5f" firstAttribute="centerX" secondItem="XPF-SM-qH9" secondAttribute="centerX" id="24V-4a-0Zy"/>
@@ -96,6 +104,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TempConverter" id="QQx-nK-BcV"/>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="jPH-q2-kqy" id="ucj-sd-kxr"/>
+                        <outlet property="convertedTempLabel" destination="Xd7-SA-Ucy" id="eZr-Lm-V7c"/>
+                        <outlet property="tempSegmentControl" destination="rCm-9c-N8l" id="um9-LE-xja"/>
+                        <outlet property="tempSlider" destination="3FG-Jp-M5f" id="8Bf-6Q-zPv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
