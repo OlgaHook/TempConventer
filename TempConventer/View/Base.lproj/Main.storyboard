@@ -108,7 +108,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle" catalog="system" id="RoG-gb-weK">
                             <color key="tintColor" systemColor="labelColor"/>
                             <connections>
-                                <segue destination="6Lj-a5-K2w" kind="presentation" id="AKh-0t-1WX"/>
+                                <segue destination="Oud-oc-cP6" kind="presentation" id="Qad-iR-QHp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -125,21 +125,20 @@
             <point key="canvasLocation" x="799.20000000000005" y="63.418290854572717"/>
         </scene>
         <!--Info View Controller-->
-        <scene sceneID="WmQ-E3-k3q">
+        <scene sceneID="Hjx-nE-Q3N">
             <objects>
-                <viewController id="6Lj-a5-K2w" customClass="InfoViewController" customModule="TempConventer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jzr-Sd-foV">
+                <viewController id="Oud-oc-cP6" customClass="InfoViewController" customModule="TempConventer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WFn-PX-kwj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXA-y6-GL0">
-                                <rect key="frame" x="305" y="20" width="40" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thb-bu-Fo2">
+                                <rect key="frame" x="296" y="29" width="40" height="40"/>
                                 <color key="backgroundColor" red="0.033924711230000001" green="0.8925574422" blue="0.1075717127" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="3XE-ob-FoV"/>
-                                    <constraint firstAttribute="height" constant="40" id="9cP-eP-To9"/>
+                                    <constraint firstAttribute="height" constant="40" id="4N4-mC-cNL"/>
+                                    <constraint firstAttribute="width" constant="40" id="gkB-So-MWC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="X">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
@@ -149,68 +148,36 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="closeInfoViewControlButton:" destination="6Lj-a5-K2w" eventType="touchUpInside" id="Yck-cZ-zmV"/>
+                                    <action selector="closeInfoButtonTapped:" destination="Oud-oc-cP6" eventType="touchUpInside" id="uP1-Tu-A3W"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to convert ºC to ºF and ºK" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8im-g4-Jub">
-                                <rect key="frame" x="69" y="89" width="237" height="77"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ea6-4s-thW">
+                                <rect key="frame" x="71" y="245" width="233" height="157"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="237" id="IDr-6r-2ET"/>
-                                    <constraint firstAttribute="height" constant="77" id="kMM-0Z-vwg"/>
+                                    <constraint firstAttribute="width" constant="233" id="NyP-fZ-vjC"/>
+                                    <constraint firstAttribute="height" constant="157" id="wWn-Zn-gjm"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhL-qI-VEc">
-                                <rect key="frame" x="73" y="189" width="229" height="85"/>
-                                <color key="backgroundColor" red="0.73735377950000003" green="0.65916396980000003" blue="0.087405979960000005" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="229" id="DlK-IG-uHo"/>
-                                    <constraint firstAttribute="height" constant="85" id="unb-cw-v8W"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oR7-mx-MJh">
-                                <rect key="frame" x="73" y="348" width="229" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="229" id="2kI-Di-Oph"/>
-                                    <constraint firstAttribute="height" constant="31" id="XaE-Eq-Ta0"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="ºC to ºF"/>
-                                    <segment title="ºC to ºK"/>
-                                </segments>
-                                <color key="selectedSegmentTintColor" red="0.033924711230000001" green="0.8925574422" blue="0.1075717127" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </segmentedControl>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="B9k-YU-6zR"/>
+                        <viewLayoutGuide key="safeArea" id="IKE-e6-FZu"/>
                         <color key="backgroundColor" red="0.57789178900000004" green="0.8925574422" blue="0.50422290859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="B9k-YU-6zR" firstAttribute="trailing" secondItem="8im-g4-Jub" secondAttribute="trailing" constant="69" id="3fh-Uq-LUZ"/>
-                            <constraint firstItem="WhL-qI-VEc" firstAttribute="leading" secondItem="B9k-YU-6zR" secondAttribute="leading" constant="73" id="DHX-t4-Si4"/>
-                            <constraint firstItem="8im-g4-Jub" firstAttribute="leading" secondItem="B9k-YU-6zR" secondAttribute="leading" constant="69" id="FE7-Hd-JLj"/>
-                            <constraint firstItem="8im-g4-Jub" firstAttribute="top" secondItem="B9k-YU-6zR" secondAttribute="top" constant="89" id="PtZ-GV-rFb"/>
-                            <constraint firstItem="B9k-YU-6zR" firstAttribute="trailing" secondItem="WhL-qI-VEc" secondAttribute="trailing" constant="73" id="SOR-cD-WtX"/>
-                            <constraint firstItem="B9k-YU-6zR" firstAttribute="trailing" secondItem="oR7-mx-MJh" secondAttribute="trailing" constant="73" id="avg-Sg-b1R"/>
-                            <constraint firstItem="jXA-y6-GL0" firstAttribute="top" secondItem="B9k-YU-6zR" secondAttribute="top" constant="20" id="g37-zE-yqd"/>
-                            <constraint firstItem="oR7-mx-MJh" firstAttribute="leading" secondItem="B9k-YU-6zR" secondAttribute="leading" constant="73" id="jWc-OM-iga"/>
-                            <constraint firstItem="B9k-YU-6zR" firstAttribute="trailing" secondItem="jXA-y6-GL0" secondAttribute="trailing" constant="30" id="onx-Fg-qme"/>
-                            <constraint firstItem="WhL-qI-VEc" firstAttribute="top" secondItem="8im-g4-Jub" secondAttribute="bottom" constant="23" id="pEG-re-iMc"/>
-                            <constraint firstItem="oR7-mx-MJh" firstAttribute="top" secondItem="WhL-qI-VEc" secondAttribute="bottom" constant="74" id="zsf-M9-avp"/>
+                            <constraint firstItem="Ea6-4s-thW" firstAttribute="centerX" secondItem="WFn-PX-kwj" secondAttribute="centerX" id="YE8-3a-sgc"/>
+                            <constraint firstItem="thb-bu-Fo2" firstAttribute="top" secondItem="IKE-e6-FZu" secondAttribute="top" constant="29" id="Z7j-Af-wBW"/>
+                            <constraint firstItem="IKE-e6-FZu" firstAttribute="trailing" secondItem="thb-bu-Fo2" secondAttribute="trailing" constant="39" id="naG-hP-F59"/>
+                            <constraint firstItem="Ea6-4s-thW" firstAttribute="centerY" secondItem="WFn-PX-kwj" secondAttribute="centerY" id="oDk-V5-wT1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="Ea6-4s-thW" id="2ur-Dn-iYu"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="whl-Hs-wBp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="swV-US-pn9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1480.8" y="73.313343328335833"/>
+            <point key="canvasLocation" x="1493.5999999999999" y="76.911544227886068"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5rP-2y-Kkf">

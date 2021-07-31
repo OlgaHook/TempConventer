@@ -8,29 +8,34 @@
 import UIKit
 
 class InfoViewController: UIViewController {
+    
+    @IBOutlet weak var infoLabel: UILabel!
+    
+    
 
-    
-    @IBAction func closeInfoViewControlButton(_ sender: Any) {
-        
+    @IBAction func closeInfoButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+        
     }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+        infoLabel.text = "View Controller segue for InfoViewController set propertly"    }
     
 
-    /*
+ 
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "InfoViewController" {
+            
+            infoLabel.text = "View Controller segue for InfoViewController set propertly"
+        }
+        
+        
+            }
+    //Pass the selected object to the new view controller.
     }
-    */
 
-}
+
+

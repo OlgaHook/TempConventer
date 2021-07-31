@@ -52,8 +52,8 @@ class ViewController: UIViewController {
         
         switch tempSegmentControl.selectedSegmentIndex{
         case 0:
-            let fahahrenheitTempString = String(format : "%.2F",  convertTempFrom(celsius: celsiusTemp).fahrenheit)
-            convertedTemperString = fahahrenheitTempString + " ºF"
+            let fahrenheitTempString = String(format : "%.2F",  convertTempFrom(celsius: celsiusTemp).fahrenheit)
+            convertedTemperString = fahrenheitTempString + " ºF"
 
         default:
             
