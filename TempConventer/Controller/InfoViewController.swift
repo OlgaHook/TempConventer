@@ -9,9 +9,11 @@ import UIKit
 
 class InfoViewController: UIViewController {
     
+    var myTextLabel: String = ""
+    
     @IBOutlet weak var infoLabel: UILabel!
     
-    
+  
 
     @IBAction func closeInfoButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -19,7 +21,8 @@ class InfoViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        infoLabel.text = "View Controller segue for InfoViewController set propertly"    }
+        infoLabel.text = myTextLabel
+    }
     
 
  
@@ -29,10 +32,12 @@ class InfoViewController: UIViewController {
         
         if segue.identifier == "InfoViewController" {
             
-            infoLabel.text = "View Controller segue for InfoViewController set propertly"
+            //infoLabel.text = "View Controller segue for InfoViewController set propertly"
         }
-        
-        
+        if segue.destination is InfoViewController{
+                let vc = segue.destination as? InfoViewController
+                vc?.myTextLabel = "View Controller segue for InfoViewController set propertly"
+            }
             }
     //Pass the selected object to the new view controller.
     }
