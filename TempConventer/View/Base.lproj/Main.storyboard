@@ -155,7 +155,7 @@
                                     <action selector="closeCurrencyVCButtonTapped:" destination="jyT-Cf-hPB" eventType="touchUpInside" id="MmX-je-yXh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency conventer from Euro to UDS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76I-9w-4UE">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency conventer from Euro to USD" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76I-9w-4UE">
                                 <rect key="frame" x="69" y="104" width="236" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="68" id="0zY-vD-Izj"/>
@@ -165,7 +165,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPY-Ff-etC">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPY-Ff-etC">
                                 <rect key="frame" x="113" y="406" width="145" height="50"/>
                                 <color key="backgroundColor" red="0.50818499640000003" green="0.58533770200000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -193,7 +193,7 @@
                                     <action selector="currencySliderValuechanged:" destination="jyT-Cf-hPB" eventType="valueChanged" id="HLv-52-8Nc"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eur" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2G-Kb-Yas">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eur" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2G-Kb-Yas">
                                 <rect key="frame" x="113" y="219" width="145" height="50"/>
                                 <color key="backgroundColor" red="0.5081849963902223" green="0.58533770204235069" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -266,27 +266,73 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ea6-4s-thW">
-                                <rect key="frame" x="71" y="245" width="233" height="157"/>
+                                <rect key="frame" x="71" y="203" width="233" height="199"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="233" id="NyP-fZ-vjC"/>
-                                    <constraint firstAttribute="height" constant="157" id="wWn-Zn-gjm"/>
+                                    <constraint firstAttribute="height" constant="199" id="wWn-Zn-gjm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y01-8p-JW3">
+                                <rect key="frame" x="233" y="564" width="126" height="30"/>
+                                <color key="backgroundColor" red="0.033924711230000001" green="0.8925574422" blue="0.1075717127" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="126" id="A65-Iv-NCz"/>
+                                    <constraint firstAttribute="height" constant="30" id="v6o-Qf-j24"/>
+                                </constraints>
+                                <state key="normal" title="Open Settings">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="OpenSettings:" destination="Oud-oc-cP6" eventType="touchUpInside" id="COP-KE-Yhc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRy-0U-OxO">
+                                <rect key="frame" x="233" y="506" width="126" height="30"/>
+                                <color key="backgroundColor" red="0.033924711230000001" green="0.8925574422" blue="0.1075717127" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="126" id="KSy-lu-TJr"/>
+                                    <constraint firstAttribute="height" constant="30" id="LbY-H8-ZeL"/>
+                                </constraints>
+                                <state key="normal" title="Change Theme">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="changeThemeButtonTapped:" destination="Oud-oc-cP6" eventType="touchUpInside" id="TOB-CA-Cnd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IKE-e6-FZu"/>
                         <color key="backgroundColor" red="0.57789178900000004" green="0.8925574422" blue="0.50422290859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="y01-8p-JW3" firstAttribute="top" secondItem="nRy-0U-OxO" secondAttribute="bottom" constant="28" id="6Rm-Ci-gC6"/>
+                            <constraint firstItem="IKE-e6-FZu" firstAttribute="trailing" secondItem="nRy-0U-OxO" secondAttribute="trailing" constant="16" id="B8M-dI-mE5"/>
+                            <constraint firstItem="y01-8p-JW3" firstAttribute="leading" secondItem="IKE-e6-FZu" secondAttribute="leading" constant="233" id="VCe-FS-5g5"/>
                             <constraint firstItem="Ea6-4s-thW" firstAttribute="centerX" secondItem="WFn-PX-kwj" secondAttribute="centerX" id="YE8-3a-sgc"/>
                             <constraint firstItem="thb-bu-Fo2" firstAttribute="top" secondItem="IKE-e6-FZu" secondAttribute="top" constant="29" id="Z7j-Af-wBW"/>
+                            <constraint firstItem="IKE-e6-FZu" firstAttribute="bottom" secondItem="y01-8p-JW3" secondAttribute="bottom" constant="53" id="bdh-tA-Gcw"/>
+                            <constraint firstItem="IKE-e6-FZu" firstAttribute="trailing" secondItem="y01-8p-JW3" secondAttribute="trailing" constant="16" id="iQ8-iH-92l"/>
+                            <constraint firstItem="nRy-0U-OxO" firstAttribute="leading" secondItem="IKE-e6-FZu" secondAttribute="leading" constant="233" id="kOv-cc-N9X"/>
                             <constraint firstItem="IKE-e6-FZu" firstAttribute="trailing" secondItem="thb-bu-Fo2" secondAttribute="trailing" constant="39" id="naG-hP-F59"/>
-                            <constraint firstItem="Ea6-4s-thW" firstAttribute="centerY" secondItem="WFn-PX-kwj" secondAttribute="centerY" id="oDk-V5-wT1"/>
+                            <constraint firstItem="Ea6-4s-thW" firstAttribute="centerY" secondItem="WFn-PX-kwj" secondAttribute="centerY" constant="-21" id="oDk-V5-wT1"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="changeThemeButton" destination="nRy-0U-OxO" id="gfZ-Pu-AEg"/>
                         <outlet property="infoLabel" destination="Ea6-4s-thW" id="2ur-Dn-iYu"/>
+                        <outlet property="openSettingsButton" destination="y01-8p-JW3" id="c2S-Vk-6bU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="swV-US-pn9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

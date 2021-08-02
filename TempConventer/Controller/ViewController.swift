@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tempSegmentControl: UISegmentedControl!
     @IBOutlet weak var tempSlider: UISlider!{
         didSet{
+            //max and min value may be set as
             tempSlider.maximumValue = 100
             tempSlider.minimumValue = 0
             tempSlider.value = 0
@@ -22,7 +23,8 @@ class ViewController: UIViewController {
         }
     }
     
-    
+    //Created var for passing by segue
+    var valueToPass:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +66,8 @@ class ViewController: UIViewController {
         // Label update
         convertedTempLabel.text = convertedTemperString
         
+          valueToPass = convertedTemperString
+        
     }
     
     func convertTempFrom(celsius : Int) -> (fahrenheit : Double, kelvin : Double)
@@ -83,9 +87,9 @@ class ViewController: UIViewController {
             //infoLabel.text = "View Controller segue for InfoViewController set propertly"
         }
         if segue.destination is InfoViewController{
-                let vc = segue.destination as? InfoViewController
-                vc?.myTextLabel = "View Controller segue for InfoViewController set propertly"
-            }
+                let vc = segue.destination as! InfoViewController
+            vc.myTextLabel = ("Calculated value from TempConverter is\n\(valueToPass)")
+        }
     
 }
 }
