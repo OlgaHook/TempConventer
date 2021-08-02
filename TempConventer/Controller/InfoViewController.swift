@@ -28,7 +28,8 @@ class InfoViewController: UIViewController {
  
     // MARK: - Navigation
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "InfoViewController" {
             
@@ -39,6 +40,7 @@ class InfoViewController: UIViewController {
                 vc?.myTextLabel = "View Controller segue for InfoViewController set propertly"
             }
             }
+    */
     //Pass the selected object to the new view controller.
     }
 

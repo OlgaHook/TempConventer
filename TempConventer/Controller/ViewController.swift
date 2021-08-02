@@ -75,5 +75,18 @@ class ViewController: UIViewController {
     return (fahrenheit, kelvin)
     
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "InfoViewController" {
+            
+            //infoLabel.text = "View Controller segue for InfoViewController set propertly"
+        }
+        if segue.destination is InfoViewController{
+                let vc = segue.destination as? InfoViewController
+                vc?.myTextLabel = "View Controller segue for InfoViewController set propertly"
+            }
+    
+}
 }
 

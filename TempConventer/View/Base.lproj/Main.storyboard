@@ -215,13 +215,13 @@
                         <constraints>
                             <constraint firstItem="76I-9w-4UE" firstAttribute="top" secondItem="tAC-Z1-kcJ" secondAttribute="top" constant="104" id="244-wV-UQd"/>
                             <constraint firstItem="tAC-Z1-kcJ" firstAttribute="trailing" secondItem="u2G-Kb-Yas" secondAttribute="trailing" constant="117" id="Asi-Kc-uAM"/>
-                            <constraint firstItem="76I-9w-4UE" firstAttribute="leading" secondItem="tAC-Z1-kcJ" secondAttribute="leading" constant="69" id="Ifs-ez-wVr"/>
+                            <constraint firstItem="76I-9w-4UE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tAC-Z1-kcJ" secondAttribute="leading" constant="69" id="Ifs-ez-wVr"/>
                             <constraint firstItem="vPY-Ff-etC" firstAttribute="leading" secondItem="tAC-Z1-kcJ" secondAttribute="leading" constant="113" id="J5d-6D-hjD"/>
                             <constraint firstItem="tAC-Z1-kcJ" firstAttribute="trailing" secondItem="76I-9w-4UE" secondAttribute="trailing" constant="70" id="JPo-ia-U5l"/>
                             <constraint firstItem="tAC-Z1-kcJ" firstAttribute="trailing" secondItem="Uz2-pr-h9x" secondAttribute="trailing" constant="70" id="MlM-QG-cY7"/>
                             <constraint firstItem="vPY-Ff-etC" firstAttribute="top" secondItem="Uz2-pr-h9x" secondAttribute="bottom" constant="53" id="P7B-qn-dEQ"/>
                             <constraint firstItem="tAC-Z1-kcJ" firstAttribute="trailing" secondItem="vPY-Ff-etC" secondAttribute="trailing" constant="117" id="PN9-e6-zlr"/>
-                            <constraint firstItem="tAC-Z1-kcJ" firstAttribute="bottom" secondItem="vPY-Ff-etC" secondAttribute="bottom" constant="191" id="aCq-PN-UDN"/>
+                            <constraint firstItem="tAC-Z1-kcJ" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vPY-Ff-etC" secondAttribute="bottom" constant="191" id="aCq-PN-UDN"/>
                             <constraint firstItem="Uz2-pr-h9x" firstAttribute="leading" secondItem="tAC-Z1-kcJ" secondAttribute="leading" constant="69" id="cW8-Ra-7fT"/>
                             <constraint firstItem="Uz2-pr-h9x" firstAttribute="top" secondItem="u2G-Kb-Yas" secondAttribute="bottom" constant="54" id="k3g-Gb-isY"/>
                             <constraint firstItem="u2G-Kb-Yas" firstAttribute="top" secondItem="76I-9w-4UE" secondAttribute="bottom" constant="47" id="w6d-Kc-vmy"/>
