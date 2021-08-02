@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B46F76B426B5A3B200B92AAE /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46F76B326B5A3B200B92AAE /* InfoViewController.swift */; };
+		B46F76B626B8123400B92AAE /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46F76B526B8123400B92AAE /* CurrencyViewController.swift */; };
 		B4C4E8C026B4ED7D003998DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C4E8BF26B4ED7D003998DE /* AppDelegate.swift */; };
 		B4C4E8C226B4ED7D003998DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C4E8C126B4ED7D003998DE /* SceneDelegate.swift */; };
 		B4C4E8C426B4ED7D003998DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C4E8C326B4ED7D003998DE /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		B46F76B326B5A3B200B92AAE /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		B46F76B526B8123400B92AAE /* CurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
 		B4C4E8BC26B4ED7D003998DE /* TempConventer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TempConventer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C4E8BF26B4ED7D003998DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4C4E8C126B4ED7D003998DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				B4C4E8C326B4ED7D003998DE /* ViewController.swift */,
 				B46F76B326B5A3B200B92AAE /* InfoViewController.swift */,
+				B46F76B526B8123400B92AAE /* CurrencyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				B4C4E8C026B4ED7D003998DE /* AppDelegate.swift in Sources */,
 				B46F76B426B5A3B200B92AAE /* InfoViewController.swift in Sources */,
 				B4C4E8C226B4ED7D003998DE /* SceneDelegate.swift in Sources */,
+				B46F76B626B8123400B92AAE /* CurrencyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

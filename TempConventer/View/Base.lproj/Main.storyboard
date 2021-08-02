@@ -105,6 +105,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TempConverter" id="QQx-nK-BcV">
+                        <barButtonItem key="leftBarButtonItem" image="eurosign.circle" catalog="system" id="Kds-Al-wMs">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <segue destination="jyT-Cf-hPB" kind="presentation" id="fj5-hE-tzm"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle" catalog="system" id="RoG-gb-weK">
                             <color key="tintColor" systemColor="labelColor"/>
                             <connections>
@@ -123,6 +129,114 @@
                 <exit id="Faw-Th-N7B" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="799.20000000000005" y="63.418290854572717"/>
+        </scene>
+        <!--Currency View Controller-->
+        <scene sceneID="7kx-6e-GXg">
+            <objects>
+                <viewController id="jyT-Cf-hPB" customClass="CurrencyViewController" customModule="TempConventer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="522-Mx-oAe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvc-5k-hW0">
+                                <rect key="frame" x="311" y="31" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.55157042519999999" green="0.1087746342" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closeCurrencyVCButtonTapped:" destination="jyT-Cf-hPB" eventType="touchUpInside" id="MmX-je-yXh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency conventer from Euro to UDS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76I-9w-4UE">
+                                <rect key="frame" x="69" y="104" width="236" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="0zY-vD-Izj"/>
+                                    <constraint firstAttribute="width" constant="236" id="Hev-Ol-7pz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPY-Ff-etC">
+                                <rect key="frame" x="113" y="406" width="145" height="50"/>
+                                <color key="backgroundColor" red="0.50818499640000003" green="0.58533770200000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="145" id="6z8-Ea-l0u"/>
+                                    <constraint firstAttribute="height" constant="50" id="c4A-cp-n8m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100000" translatesAutoresizingMaskIntoConstraints="NO" id="Uz2-pr-h9x">
+                                <rect key="frame" x="67" y="323" width="240" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="236" id="VOp-mE-GjW"/>
+                                    <constraint firstAttribute="height" constant="30" id="WPp-oP-xjO"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" red="0.57789178900000004" green="0.8925574422" blue="0.50422290859999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" red="0.493000567" green="0.1000114605" blue="0.8925574422" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="currencySliderValuechanged:" destination="jyT-Cf-hPB" eventType="valueChanged" id="HLv-52-8Nc"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eur" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2G-Kb-Yas">
+                                <rect key="frame" x="113" y="219" width="145" height="50"/>
+                                <color key="backgroundColor" red="0.5081849963902223" green="0.58533770204235069" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="145" id="Vyg-vV-gSl"/>
+                                    <constraint firstAttribute="height" constant="50" id="zcc-Ab-b4f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tAC-Z1-kcJ"/>
+                        <color key="backgroundColor" red="0.89750526117870733" green="0.69035105219795134" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="76I-9w-4UE" firstAttribute="top" secondItem="tAC-Z1-kcJ" secondAttribute="top" constant="104" id="244-wV-UQd"/>
+                            <constraint firstItem="tAC-Z1-kcJ" firstAttribute="trailing" secondItem="u2G-Kb-Yas" secondAttribute="trailing" constant="117" id="Asi-Kc-uAM"/>
+                            <constraint firstItem="76I-9w-4UE" firstAttribute="leading" secondItem="tAC-Z1-kcJ" secondAttribute="leading" constant="69" id="Ifs-ez-wVr"/>
+                            <constraint firstItem="vPY-Ff-etC" firstAttribute="leading" secondItem="tAC-Z1-kcJ" secondAttribute="leading" constant="113" id="J5d-6D-hjD"/>
+                            <constraint firstItem="tAC-Z1-kcJ" firstAttribute="trailing" secondItem="76I-9w-4UE" secondAttribute="trailing" constant="70" id="JPo-ia-U5l"/>
+                            <constraint firstItem="tAC-Z1-kcJ" firstAttribute="trailing" secondItem="Uz2-pr-h9x" secondAttribute="trailing" constant="70" id="MlM-QG-cY7"/>
+                            <constraint firstItem="vPY-Ff-etC" firstAttribute="top" secondItem="Uz2-pr-h9x" secondAttribute="bottom" constant="53" id="P7B-qn-dEQ"/>
+                            <constraint firstItem="tAC-Z1-kcJ" firstAttribute="trailing" secondItem="vPY-Ff-etC" secondAttribute="trailing" constant="117" id="PN9-e6-zlr"/>
+                            <constraint firstItem="tAC-Z1-kcJ" firstAttribute="bottom" secondItem="vPY-Ff-etC" secondAttribute="bottom" constant="191" id="aCq-PN-UDN"/>
+                            <constraint firstItem="Uz2-pr-h9x" firstAttribute="leading" secondItem="tAC-Z1-kcJ" secondAttribute="leading" constant="69" id="cW8-Ra-7fT"/>
+                            <constraint firstItem="Uz2-pr-h9x" firstAttribute="top" secondItem="u2G-Kb-Yas" secondAttribute="bottom" constant="54" id="k3g-Gb-isY"/>
+                            <constraint firstItem="u2G-Kb-Yas" firstAttribute="top" secondItem="76I-9w-4UE" secondAttribute="bottom" constant="47" id="w6d-Kc-vmy"/>
+                            <constraint firstItem="u2G-Kb-Yas" firstAttribute="leading" secondItem="tAC-Z1-kcJ" secondAttribute="leading" constant="113" id="xSc-bB-Sf8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currencySlider" destination="Uz2-pr-h9x" id="44C-kl-PVx"/>
+                        <outlet property="euroLabel" destination="u2G-Kb-Yas" id="RjZ-vM-0zA"/>
+                        <outlet property="usdLabel" destination="vPY-Ff-etC" id="Qgc-1h-W9L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b8b-qV-w3L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="808.79999999999995" y="711.99400299850083"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="Hjx-nE-Q3N">
@@ -199,6 +313,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="eurosign.circle" catalog="system" width="128" height="121"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="sun" width="375" height="667"/>
         <image name="sun.max" catalog="system" width="128" height="124"/>
