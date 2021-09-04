@@ -35,7 +35,6 @@ class InfoViewController: UIViewController {
             guard let settingURL = URL(string: UIApplication.openSettingsURLString) else {
                 return
             }
-            
             if UIApplication.shared.canOpenURL(settingURL){
                 
                 UIApplication.shared.open(settingURL, options: [:]) { success in
